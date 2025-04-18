@@ -5,22 +5,49 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        String fullname;
+        int age;
+        String profession;
+
         System.out.println("What is the person's full name: ");
-        String fullName = scanner.nextLine();
+        fullname = scanner.nextLine();
 
         System.out.println("What is the person's age: ");
-        int age = scanner.nextInt();
+        age = scanner.nextInt();
 
         // clear the CRLF
         scanner.nextLine();
 
         System.out.println("What is the person's profession: ");
-        String profession = scanner.nextLine();
+        profession = scanner.nextLine();
 
-        displayPerson(fullName, age, profession);
-        savePerson(fullName, age, profession);
+        // create a person
+        Person thePerson = new Person(fullname, age, profession);
+
+        System.out.println("What is the person's full name: ");
+        fullname = scanner.nextLine();
+
+        System.out.println("What is the person's age: ");
+        age = scanner.nextInt();
+
+        // clear the CRLF
+        scanner.nextLine();
+
+        System.out.println("What is the person's profession: ");
+        profession = scanner.nextLine();
+
+        // create other person
+        Person theOtherPerson = new Person(fullname, age, profession);
+        // print the person name
+        System.out.println(thePerson.getFullname());
+        System.out.println(theOtherPerson.getFullname());
+       // displayPerson(fullName, age, profession);
+       // savePerson(fullName, age, profession);
         
-        System.out.printf("Person %s is %s and is %d years old.", fullName, profession, age);
+        System.out.printf("Person %s is %s and is %d years old.\n"
+                , thePerson.getFullname()
+                , thePerson.getProfession()
+                , thePerson.getAge());
     }
 
     private static void displayPerson(String fullName, int age, String profession) {
