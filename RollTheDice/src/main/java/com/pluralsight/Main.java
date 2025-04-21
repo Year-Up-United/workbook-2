@@ -17,7 +17,14 @@ public class Main {
           int rollTotal = roll1 + roll2;
           System.out.printf("Roll #%d: %d - %d  Sum: %d\n", rollNumber, roll1, roll2, rollTotal);
 
+          if(rollTotal == 2){ numOf2++;}
+          if(rollTotal == 4){ numOf4++;}
+          if(rollTotal == 6){ numOf6++;}
+          if(rollTotal == 7){ numOf7++;}
        }
-
+       System.out.println("Total number of 2s:" + numOf2);
+       System.out.println("Total number of 4s:" + numOf4);
+       System.out.println("Total number of 6s:" + numOf6);
+       System.out.println("Total number of 7s:" + numOf7);
     }
 }
