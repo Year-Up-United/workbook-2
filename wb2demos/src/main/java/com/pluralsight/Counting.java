@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 public class Counting {
-    public static void main(String[] arges) {
+    public static void main(String[] args) throws InterruptedException{
 
     }
 
@@ -13,6 +13,18 @@ public class Counting {
             sum += i;
             i++;
         } while (i <= 10);
+
+        System.out.println("i= " + i);
         System.out.println("Sum = " + sum);
+        System.out.println();
+
+        Thread.sleep(1000);
+
+        i++;
+        System.out.println("--------------------");
+        System.out.println("Sum= " + sum);
+
+
+
     }
 }
